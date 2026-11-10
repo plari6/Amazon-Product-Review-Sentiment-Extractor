@@ -1,0 +1,39 @@
+{
+  "name": "amazon-review-sentiment-extractor",
+  "version": "1.0.0",
+  "description": "Collects Amazon product reviews (Puppeteer + Cheerio), extracts flaws, aspects and sentiment with Gemini over a multi-model fallback chain, and ranks the biggest weaknesses of competitor products.",
+  "type": "module",
+  "bin": {
+    "review-extractor": "bin/review-extractor.js"
+  },
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node bin/review-extractor.js",
+    "demo": "node bin/review-extractor.js demo",
+    "doctor": "node bin/review-extractor.js doctor",
+    "test": "node --test --test-concurrency=1 \"test/**/*.test.js\""
+  },
+  "keywords": [
+    "amazon",
+    "reviews",
+    "sentiment-analysis",
+    "competitor-analysis",
+    "puppeteer",
+    "cheerio",
+    "gemini",
+    "scraper"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "commander": "^15.1.0",
+    "dotenv": "^18.0.10",
+    "exceljs": "^4.4.0",
+    "puppeteer": "^25.17.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
